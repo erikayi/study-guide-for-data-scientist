@@ -1,5 +1,4 @@
 ### Study guide made it for Data Scientist, Software Engineering, etc. 
-#### Exclusive for Technical Interview.
 
 # Build a Practical Study Guide 
 Create four sections, then study each with a learn > practice > build > review loop. 
