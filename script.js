@@ -29,6 +29,7 @@ const resources = [
   { category: "Data", title: "SQL Mastery", text: "Join, aggregate, and query realistic datasets.", link: "https://mode.com/sql-tutorial/" },
   { category: "Data", title: "ML Foundations", text: "Courses and notebooks for core model concepts.", link: "https://www.kaggle.com/learn" },
   { category: "Systems", title: "System Design", text: "Patterns for scalable, reliable data applications.", link: "https://github.com/donnemartin/system-design-primer" },
+  { category: "Systems", title: "Brainstorm a Program or Platform", text: "Turn an idea into clear requirements, architecture, milestones, and a testable prototype.", link: "https://cloud.google.com/architecture/framework" },
   { category: "Systems", title: "Distributed Systems", text: "Event buses, resilience, observability, and service boundaries.", link: "https://kafka.apache.org/documentation/" },
   { category: "Coding", title: "Git & Version Control", text: "Branching, collaboration, and review workflows.", link: "https://learngitbranching.js.org/" },
   { category: "Systems", title: "Docker Handbook", text: "Package applications and environments consistently.", link: "https://docs.docker.com/get-started/" },
