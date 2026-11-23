@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A practical 12-week study plan for data scientist and software engineering interviews." />
+    <title>DS Path — 12 Week Study Guide</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css?v=5" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="DS Path home">
+        <span class="brand-mark">D<span>/</span>S</span>
+        <span>DS PATH</span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a class="active" href="#roadmap" data-tab="roadmap">Roadmap</a>
+        <a href="#engineering" data-tab="engineering">Engineering</a>
+        <a href="#resources" data-tab="resources">Resources</a>
+        <a href="#projects" data-tab="projects">Projects</a>
+        <a href="#notes" data-tab="notes">Notes</a>
+      </nav>
+      <button class="profile-button" type="button" aria-label="View profile">E</button>
+    </header>
+
+    <main>
+      <section class="hero" id="roadmap">
+        <div>
+          <p class="eyebrow"><span></span> 12-WEEK INTERVIEW TRACK</p>
+          <h1>Build the skills.<br /><em>Ship the proof.</em></h1>
+        </div>
+        <div class="hero-progress" aria-label="Overall study progress">
+          <div class="progress-ring" id="progressRing">
+            <div><strong id="progressPercent">0%</strong><span>complete</span></div>
+          </div>
+          <div class="progress-copy">
+            <span>Weekly rhythm</span>
+            <strong>60% practice</strong>
+            <span>40% concepts</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="dashboard">
+        <aside class="week-sidebar">
+          <div class="sidebar-heading">
+            <span>THE ROADMAP</span>
+            <button id="resetProgress" type="button">Reset</button>
+          </div>
+          <div id="weekList" class="week-list"></div>
+        </aside>
+
+        <article class="week-panel">
+          <div class="week-header">
+            <div>
+              <p id="weekKicker" class="week-kicker">WEEK 01 · FOUNDATION</p>
+              <h2 id="weekTitle">Python &amp; Analysis</h2>
+            </div>
+            <div class="week-count" id="weekCount">01 / 12</div>
+          </div>
+
+          <p id="weekSummary" class="week-summary"></p>
+
+          <div class="focus-grid">
+            <section>
+              <div class="section-label"><span>01</span> Study focus</div>
+              <ul id="studyList" class="check-list"></ul>
+            </section>
+            <section>
+              <div class="section-label"><span>02</span> Build &amp; practice</div>
+              <ul id="practiceList" class="task-list"></ul>
+            </section>
+          </div>
+
+          <div class="week-footer">
+            <div class="deliverable">
+              <span>Weekly deliverable</span>
+              <strong id="deliverable"></strong>
+            </div>
+            <button id="completeWeek" class="complete-button" type="button">
+              Mark week complete <span>→</span>
+            </button>
+          </div>
+        </article>
+      </section>
+
+      <section class="engineering" id="engineering">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow"><span></span> SOFTWARE ENGINEERING</p>
+            <h2>Build across stacks</h2>
+          </div>
+        </div>
+        <div class="language-grid">
+          <article class="language-card">
+            <div class="language-head">
+              <span class="language-icon java">J</span>
+              <div>
+                <p>ENTERPRISE · JVM</p>
+                <h3>Java</h3>
+              </div>
+            </div>
+            <ul>
+              <li><strong>Core:</strong> collections, streams, generics, concurrency, JVM memory</li>
+              <li><strong>Backend:</strong> Spring Boot, REST, validation, transactions, Spring Security</li>
+              <li><strong>Data:</strong> JPA/Hibernate, migrations, indexes, caching, message brokers</li>
+              <li><strong>Quality:</strong> JUnit, Testcontainers, Maven/Gradle, observability</li>
+            </ul>
+            <div class="mini-plan"><span>Practice</span> Build a REST service with JWT auth and an integration test.</div>
+          </article>
+          <article class="language-card">
+            <div class="language-head">
+              <span class="language-icon python">Py</span>
+              <div>
+                <p>PRODUCT · DATA · API</p>
+                <h3>Python</h3>
+              </div>
+            </div>
+            <ul>
+              <li><strong>Core:</strong> types, decorators, generators, async/await, multiprocessing</li>
+              <li><strong>Backend:</strong> FastAPI/Django, dependency injection, auth, OpenAPI</li>
+              <li><strong>Data:</strong> pandas, Pydantic, task queues, SQLAlchemy, caching</li>
+              <li><strong>Quality:</strong> pytest, type checking, packaging, profiling, CI/CD</li>
+            </ul>
+            <div class="mini-plan"><span>Practice</span> Package a FastAPI service with typed models and async tests.</div>
+          </article>
+        </div>
+      </section>
+
+      <section class="blueprints" id="blueprints">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow"><span></span> PROJECT BLUEPRINTS</p>
+            <h2>Build systems that matter</h2>
+          </div>
+        </div>
+        <div class="blueprint-grid">
+          <article class="blueprint">
+            <div class="blueprint-top">
+              <span>01 · CONSUMER PRODUCT</span>
+              <span class="difficulty">Intermediate</span>
+            </div>
+            <h3>Music Program</h3>
+            <p>Design a real-time music workstation for practice, arrangement, and playback.</p>
+            <div class="blueprint-columns">
+              <div>
+                <h4>Core features</h4>
+                <ul>
+                  <li>Sequencer timeline and multitrack mixing</li>
+                  <li>Audio/metronome scheduling with Web Audio or PortAudio</li>
+                  <li>MIDI import/export and virtual instrument support</li>
+                  <li>Project save, undo/redo, export to WAV/MIDI</li>
+                </ul>
+              </div>
+              <div>
+                <h4>Engineering stack</h4>
+                <ul>
+                  <li>Java: Java Sound API and MIDI</li>
+                  <li>Python: librosa, NumPy, Flask or FastAPI</li>
+                  <li>WASM/Web Audio for a browser version</li>
+                  <li>PostgreSQL for users, projects, and stems</li>
+                </ul>
+              </div>
+            </div>
+            <div class="architecture">START <span>→</span> MIDI/AUDIO INGEST <span>→</span> EVENT ENGINE <span>→</span> MIXER <span>→</span> EXPORT</div>
+          </article>
+          <article class="blueprint">
+            <div class="blueprint-top">
+              <span>02 · ENTERPRISE PLATFORM</span>
+              <span class="difficulty">Advanced</span>
+            </div>
+            <h3>Distributed Logistics Platform</h3>
+            <p>Coordinate orders, inventory, routes, warehouses, and live shipment events at enterprise scale.</p>
+            <div class="blueprint-columns">
+              <div>
+                <h4>Core services</h4>
+                <ul>
+                  <li>Orders, inventory, warehouse, and fleet domains</li>
+                  <li>Event-driven route and shipment updates</li>
+                  <li>Idempotent APIs and reliable retry workflows</li>
+                  <li>Tenant access, audit logs, and reporting</li>
+                </ul>
+              </div>
+              <div>
+                <h4>Engineering stack</h4>
+                <ul>
+                  <li>Java/Spring Boot for domain services</li>
+                  <li>Python for forecasting and route optimization</li>
+                  <li>Kafka, PostgreSQL, Redis, and OpenSearch</li>
+                  <li>Kubernetes, OpenTelemetry, and CI/CD</li>
+                </ul>
+              </div>
+            </div>
+            <div class="architecture">ORDER <span>→</span> EVENT BUS <span>→</span> ROUTER <span>→</span> WAREHOUSE <span>→</span> TRACKING</div>
+          </article>
+        </div>
+      </section>
+
+      <section class="resources" id="resources">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow"><span></span> TOOLKIT</p>
+            <h2>Study resources</h2>
+          </div>
+          <div class="filters" aria-label="Filter resources">
+            <button class="filter active" type="button" data-filter="All">All</button>
+            <button class="filter" type="button" data-filter="Coding">Coding</button>
+            <button class="filter" type="button" data-filter="Data">Data</button>
+            <button class="filter" type="button" data-filter="Systems">Systems</button>
+          </div>
+        </div>
+        <div id="resourceGrid" class="resource-grid"></div>
+      </section>
+
+      <section class="projects" id="projects">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow"><span></span> PORTFOLIO</p>
+            <h2>Proof of work</h2>
+          </div>
+        </div>
+        <div class="project-grid">
+          <article><span>01</span><h3>Model in the wild</h3><p>Clean, train, evaluate, and publish a predictive model.</p></article>
+          <article><span>02</span><h3>Analytics API</h3><p>Turn SQL insights into a documented REST endpoint.</p></article>
+          <article><span>03</span><h3>ML pipeline</h3><p>Build an end-to-end pipeline with Docker and CI/CD.</p></article>
+        </div>
+      </section>
+
+      <section class="notes" id="notes">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow"><span></span> STUDY JOURNAL</p>
+            <h2>My notes</h2>
+          </div>
+          <button id="clearNotes" class="clear-notes" type="button">Clear all</button>
+        </div>
+        <div class="notes-layout">
+          <form id="noteForm" class="note-editor">
+            <label for="noteTopic">Topic</label>
+            <input id="noteTopic" type="text" placeholder="e.g. Confidence intervals" maxlength="80" required />
+            <label for="noteCategory">Category</label>
+            <select id="noteCategory">
+              <option>Data Science</option>
+              <option>Python</option>
+              <option>Java</option>
+              <option>Systems</option>
+              <option>Interview</option>
+            </select>
+            <label for="noteText">Key takeaway</label>
+            <textarea id="noteText" placeholder="Summarize what you learned..." maxlength="1200" required></textarea>
+            <button class="save-note" type="submit">Save note <span>+</span></button>
+          </form>
+          <div class="notes-board">
+            <div class="board-heading">
+              <span>Saved entries</span>
+              <span id="noteCount">0 notes</span>
+            </div>
+            <div id="notesList" class="notes-list"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js?v=5"></script>
+  </body>
+</html>
