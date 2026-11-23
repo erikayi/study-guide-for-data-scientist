@@ -2,6 +2,7 @@
 
 # Build a Practical Study Guide 
 Create four sections, then study each with a learn > practice > build > review loop. 
+You can find my live study guide here: https://erikayi.github.io/study-guide-for-data-scientist/ 
 
 # 1. Core Data Science 
 - Statistics: probability, distributions, hypothesis testing, confidence intervals
