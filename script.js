@@ -14,6 +14,15 @@ const weeks = [
 ];
 
 const resources = [
+  { category: "Calculus", title: "Khan Academy Calculus", text: "Limits, derivatives, integrals, and applications for machine learning.", link: "https://www.khanacademy.org/math/calculus-1" },
+  { category: "Calculus", title: "3Blue1Brown: Calculus", text: "Visual explanations of derivatives and integrals through intuition.", link: "https://www.3blue1brown.com/topics/calculus" },
+  { category: "Calculus", title: "Calculus for ML", text: "Practice multivariable calculus, gradients, and optimization concepts.", link: "https://www.khanacademy.org/math/multivariable-calculus" },
+  { category: "AI", title: "Transformers & Attention", text: "Understand modern language models, embeddings, and inference.", link: "https://huggingface.co/learn/nlp-course" },
+  { category: "AI", title: "RAG Systems", text: "Retrieve grounded context and evaluate generative answers.", link: "https://docs.llamaindex.ai/" },
+  { category: "AI", title: "AI Evals", text: "Build datasets and score quality, safety, and reliability.", link: "https://docs.ragas.io/" },
+  { category: "Automation", title: "Workflow Orchestration", text: "Schedule, retry, monitor, and backfill production workflows.", link: "https://docs.prefect.io/" },
+  { category: "Automation", title: "Browser Automation", text: "Automate end-to-end web testing and repeatable tasks.", link: "https://playwright.dev/docs/intro" },
+  { category: "Automation", title: "Infrastructure as Code", text: "Provision cloud infrastructure using reusable configurations.", link: "https://developer.hashicorp.com/terraform" },
   { category: "Coding", title: "Python Practice", text: "Data structures, algorithms, and timed problem solving.", link: "https://leetcode.com/" },
   { category: "Coding", title: "Java Engineering", text: "Spring, JVM internals, concurrency, and enterprise patterns.", link: "https://spring.io/guides" },
   { category: "Coding", title: "Python Engineering", text: "FastAPI, typing, testing, packaging, and async services.", link: "https://fastapi.tiangolo.com/" },
@@ -149,8 +158,11 @@ document.querySelectorAll(".topbar nav a[data-tab]").forEach(link => {
 const sections = [
   document.getElementById("roadmap"),
   document.getElementById("engineering"),
+  document.getElementById("expertise"),
+  document.getElementById("certifications"),
   document.getElementById("resources"),
   document.getElementById("blueprints"),
+  document.getElementById("salary"),
   document.getElementById("notes")
 ].filter(Boolean);
 
@@ -236,8 +248,11 @@ const observer = new IntersectionObserver(entries => {
   let tab = visible.target.id;
   if (tab === "roadmap") tab = "roadmap";
   if (tab === "engineering") tab = "engineering";
+  if (tab === "expertise") tab = "expertise";
+  if (tab === "certifications") tab = "certifications";
   if (tab === "resources") tab = "resources";
   if (tab === "blueprints") tab = "projects";
+  if (tab === "salary") tab = "salary";
 
   navLinks.forEach(link => link.classList.toggle("active", link.dataset.tab === tab));
 }, { rootMargin: "-25% 0px -60% 0px", threshold: [0.01, 0.2, 0.5] });
